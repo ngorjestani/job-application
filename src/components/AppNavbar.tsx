@@ -7,11 +7,11 @@ interface IAppNavbarProps {
 
 export const AppNavbar: FunctionComponent<IAppNavbarProps> = (props) => {
     return (
-        <Navbar bg="primary" variant="dark">
+        <Navbar bg="primary" variant="light" className="d-flex">
             <Navbar.Brand href="#home">Yellowstone</Navbar.Brand>
-            <Form inline>
+            <Form inline className="ml-auto">
                 <FormControl type="text" placeholder="Search" className="mr-sm-2"/>
-                <Button variant="outline-light">Search</Button>
+                <Button variant="outline-dark">Search</Button>
             </Form>
         </Navbar>
     );
