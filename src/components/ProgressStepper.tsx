@@ -1,10 +1,8 @@
-import React, {FunctionComponent, useEffect} from 'react';
+import React, {FunctionComponent, useEffect, useState} from 'react';
 import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
 import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -22,17 +20,13 @@ const useStyles = makeStyles((theme: Theme) =>
 );
 
 interface IProgressStepperProps {
-    currentStep: number;
+    currentStep: number;stepList: string[];
 }
 
-function getSteps() {
-    return ['Select master blaster campaign settings', 'Create an ad group', 'Create an ad'];
-}
-
-const ProgressStepper:FunctionComponent<IProgressStepperProps> = ({currentStep}) => {
+const ProgressStepper: FunctionComponent<IProgressStepperProps> = ({currentStep, stepList}) => {
     const classes = useStyles();
-    const [activeStep, setActiveStep] = React.useState(currentStep);
-    const steps = getSteps();
+    const [activeStep, setActiveStep] = useState(currentStep);
+    const [steps, setSteps] = useState(stepList);
 
     useEffect(() => {
         setActiveStep(currentStep);

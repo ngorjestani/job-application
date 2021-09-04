@@ -10,12 +10,10 @@ function App() {
         "Xanterra Parks & Resorts (Authorized Concessioner of the National Park Service) is an equal opportunity employer and does not discriminate against any individual in any phase of employment on the basis of race, color, creed, religion, sexual orientation, national origin, ancestry, veteran status, age, disability or any other legally protected status under applicable law. AA/EOE M/F/D/V\n" +
         "\nPLEASE DO NOT APPLY MORE THAN ONCE PER SEASON. You may email application changes to info@yellowstonejobs.com."
 
-
     return (
         <div className="App">
             <AlertModal modalTitle={modalTitle} modalMessage={modalMessage} showModal={true} />
             <AppNavbar/>
-            <ProgressStepper currentStep={2} />
         </div>
     );
 }
