@@ -9,9 +9,6 @@ const useStyles = makeStyles((theme: Theme) =>
         root: {
             width: '100%',
         },
-        backButton: {
-            marginRight: theme.spacing(1),
-        },
         instructions: {
             marginTop: theme.spacing(1),
             marginBottom: theme.spacing(1),
@@ -20,7 +17,8 @@ const useStyles = makeStyles((theme: Theme) =>
 );
 
 interface IProgressStepperProps {
-    currentStep: number;stepList: string[];
+    currentStep: number;
+    stepList: string[];
 }
 
 const ProgressStepper: FunctionComponent<IProgressStepperProps> = ({currentStep, stepList}) => {

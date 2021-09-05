@@ -1,6 +1,6 @@
 import React, {FunctionComponent} from "react";
 import Navbar from "react-bootstrap/Navbar";
-import {Button, Form, FormControl, Nav} from "react-bootstrap";
+import {Button, Form, FormControl} from "react-bootstrap";
 
 interface IAppNavbarProps {
 }
