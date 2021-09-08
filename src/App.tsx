@@ -3,7 +3,7 @@ import './scss/app.scss';
 import {AppNavbar} from "./components/AppNavbar";
 import {AlertModal} from "./components/AlertModal";
 import ProgressStepper from './components/Form/Steps/ProgressStepper';
-import Form from "./components/Form/Form";
+import JobForm from "./components/Form/JobForm";
 
 function App() {
     const modalTitle = "Please Read Before Proceeding With Application";
@@ -16,7 +16,7 @@ function App() {
         <div className="App">
             <AlertModal modalTitle={modalTitle} modalMessage={modalMessage} showModal={true} />
             <AppNavbar/>
-            <Form stepList={steps} />
+            <JobForm stepList={steps} />
         </div>
     );
 }
