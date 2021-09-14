@@ -5,9 +5,10 @@ interface IAlertModalProps {
     modalTitle: string;
     modalMessage: string;
     showModal: boolean;
+    buttonText: string;
 }
 
-export const AlertModal: FunctionComponent<IAlertModalProps> = ({modalTitle, modalMessage, showModal}) => {
+export const AlertModal: FunctionComponent<IAlertModalProps> = ({modalTitle, modalMessage, showModal, buttonText}) => {
     const [show, setShow] = useState(showModal);
 
     const handleClose = () => setShow(false);
@@ -27,7 +28,7 @@ export const AlertModal: FunctionComponent<IAlertModalProps> = ({modalTitle, mod
                     {modalMessage}
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button variant="primary" onClick={handleClose}>Accept & Continue</Button>
+                    <Button variant="primary" onClick={handleClose}>{buttonText}</Button>
                 </Modal.Footer>
             </Modal>
         </>
