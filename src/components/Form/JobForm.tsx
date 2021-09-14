@@ -126,9 +126,11 @@ const JobForm: FunctionComponent<IJobFormProps> = ({stepList}) => {
                             groupProps={{row: true}}/>
                             <Field name="startDate" component={KeyboardDatePicker} label="Start Date" format="dd/MM/yyyy" />
                             <Field name="endDate" component={KeyboardDatePicker} label="End Date" format="dd/MM/yyyy" />
-
-
-
+                            <Field name="appSource" label="How did you hear about us?" component={Select} options={[
+                                {value: 'You are a former YNP Employee', label: 'You are a former YNP Employee'},
+                                {value: 'Referred by current/former Emp', label: 'Referred by current/former Emp'},
+                                {value: 'Referred by friend or family', label: 'Referred by friend or family'},
+                            ]} />
                         </Form>
                     )}
                 </Formik>
